@@ -37,6 +37,9 @@ function printPixelChain(data) {
     ctx.lineTo(39, 401);
     ctx.stroke();
     ctx.fillText("250k",0,504);
+    ctx.rotate(-Math.PI/2);
+    ctx.fillText("Block heigh",-485,10);
+    ctx.rotate(Math.PI/2);
     ctx.moveTo(33, 500);
     ctx.lineTo(39, 500);
     ctx.stroke();
@@ -202,12 +205,12 @@ function printLineGraph(data) {
             },
             labels: {
                 formatter: function () {
-                    return this.value + ' TX/s';
+                    return this.value + ' ' + django_units;
                 }
             }
         },
         tooltip: {
-            pointFormat: 'The throughput of the network was <b>{point.y:,.0f}</b> TX/s'
+            pointFormat: 'Point value: <b>{point.y:,.0f}</b>'
         },
         plotOptions: {
             area: {

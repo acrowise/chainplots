@@ -1,5 +1,5 @@
-# import blocksci
-# from blocksci import Tx
+import blocksci
+from blocksci import Tx
 import time
 import json
 import argparse
