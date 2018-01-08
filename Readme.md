@@ -9,4 +9,4 @@
 *Figure 1. App diagram.*
 
 [1]: https://chainplots.herokuapp.com/
-[2]: https://github.com/fedelaport/chainplots/blob/master/TFM_Memoria_flaport.pdf
+[2]: https://github.com/fedelaport/chainplots/raw/master/TFM_Memoria_flaport.pdf
