@@ -1,0 +1,5 @@
+{% extends 'page_tipo.html' %} {% load static %}
+{% block header %}Throughput of the Bitcoin Network{% endblock %}
+{% block text %}Avarage throughput of the network calculated from the last 12 blocks. This is intended to avoid the errors induced by the deviation of the blocks timestamps. The bitcoin network, as it is a decentralized network, has considerable variations between timestamps provided by the nodes.{% endblock %}
+{% block pixel_info %}Full dark pixel is 0 and full colored pixel is {{ range_max }} TX/min or more.{% endblock %}
+{% block line_info %}Number of transactions per second at each heigh in the blockchain. Each point value is a 1000 blocks average.{% endblock %}

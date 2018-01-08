@@ -1,0 +1,57 @@
+{% load static %}
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+<link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
+<!-- Font awesome -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!-- Chainplots CSS -->
+<link rel="stylesheet" href="{% static 'chainplots.css' %}">
+
+
+{% include 'navbar.html' %}
+
+<br>
+
+<!-- Content -->
+<div class="container">
+    <div class="row">
+        {% block content %}
+        <div class="col">
+            <div class="jumbotron">
+                <h1 class="display-3">Chainplots</h1>
+                <hr><br>
+                <h4>Graphical visualizations of blockchain data.</h4>
+                <p> This website was built by <a href="https://about.me/echefede">Federico Laport Rivas</a> as a Masters Dissertation applying for the Information Security Masters Degree at Universitat Autònoma de Barcelona. The dissertation was directed by <a href="http://www.deic.uab.cat/~jherrera/">Jordi Herrera Joancomartí</a>. The source code can be reviewed in <a href="https://github.com/fedelaport/chainplots">GitHub</a>.</p>
+                <p> The project was written in Python. It is a Django application and some BlockSci analysis scripts.</p>
+                <h4>Graphical visualizations.</h4>
+                <p> Every parameter plotted is represented as a matrix of pixels and as a classic line graph. In the pixel matrix, each pixel represents a block of the bitcoin blockchain. This approach was heavily inspired by <a href="https://utxo-stats.com">utxo-stats.com</a>. In the other hand, we have a vertical shaped classic line graph. Up is present and down is past, following the notion of block <strong>depth</strong>.</p>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+    <br><br>
+</div>
+<!-- End content -->
+
+<!-- Bootstrap JS dependencies -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<script src="{% static 'highcharts.js' %}"></script>
+{# <script src="{% static 'exporting.js' %}"></script> #}
+<script src="{% static 'theme.js' %}"></script>
+
+<!-- vuejs -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
+<!-- Chainplots JS Main File -->
+<script>
+    var django_plot = '{{ plot }}';
+    var django_line_param = '{{ line_param }}';
+    var django_range_max = '{{ range_max }}';
+    var django_units = '{{ units }}';
+</script>
+<script src="{% static 'chainplots.js' %}"></script>

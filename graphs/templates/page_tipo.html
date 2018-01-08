@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-6">
+        <h1>{% block header %}{% endblock %}</h1>
+        <p> {% block text %}{% endblock %} </p>
+        <div id="pixelinfo">
+            <h4>Pixel-block info</h4>
+            <p>
+                {% block pixel_info %}Full dark pixel is 0 and full colored pixel is {{ range_max }} or more.{% endblock %}
+            </p>
+            <p>Each row of the matrix has 504 pixels, which means a theoretical period of one week every two pixel rows.</p>
+        </div>
+        <div id="lineinfo">
+            <h4>Classic line info</h4>
+            <p>{% block line_info %}Parameter ploted at each heigh in the blockchain. Each point value is a 1000 blocks average.{% endblock %}
+            </p>
+        </div>
+        <h4>Plot style</h4>
+        <p>Switch between pixel-block styled graph and classical line graph.</p>
+        <!-- Buttons -->
+        <div class="btn-group btn-group-toggle" data-toggle="buttons" id="graphswitch">
+            <label class="btn btn-primary active">
+                <input type="radio" name="options" value="pixels" autocomplete="off" checked> Pixel-block
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="options" value="line" autocomplete="off"> Classic Line
+            </label>
+        </div>
+        <!-- Switch -->
+    </div>
+    <div class="col-lg-6">
+        <br>
+        <!-- Spinner -->
+        <div id="spinner" class="pixelblocks">
+            <br>
+            <br>
+            <br>
+            <h3 class="text-center">Loading data</h3>
+            <p class="text-center"><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i></p>
+            <span class="sr-only">Loading...</span>
+        </div>
+        <!-- End spinner -->
+        <!-- CANVAS 1008 blocks, arround 1 week. 2 lines 1 week -->
+        <canvas id="mycanvas" width="544" height="1000" class="blockchain"></canvas>
+        <!-- CHART -->
+        <div id="mychart" style="min-width: 500px; height: 1000px; margin: 0 auto"></div>
+    </div>
+{% endblock %}

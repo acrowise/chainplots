@@ -1,0 +1,4 @@
+{% extends 'page_tipo.html' %} {% load static %}
+{% block header %}Spent coinbase UTXO Ratio{% endblock %}
+{% block text %}Description: Distribution of coinbase outputs already spent. This parameter is live. It's supposed to change old blocks status when a new block with a TX spending coinbase is detected.{% endblock %}
+{% block pixel_info %}Full dark pixel when the coinbase is still an UTXO and full colored pixel when {{ range_max }} or more coinbased outputs are already redeemed.{% endblock %}

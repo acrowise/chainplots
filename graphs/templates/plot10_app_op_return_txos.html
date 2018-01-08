@@ -1,0 +1,8 @@
+{% extends 'page_tipo.html' %} {% load static %}
+{% block header %}Number of TX from known apps{% endblock %}
+{% block text %}Total number of transaction outputs using OP_RETURN with data originated from known apps (such as Omni Layer or Counterparty) in each block. In the pixel matrix, it's only represented the color of the most used application in the block.{% endblock %}
+{% block extra_data %}
+<p>Colors: </p>
+<img src="{% static 'legend.png' %}" alt="Smiley face">
+</br></br>
+{% endblock %}

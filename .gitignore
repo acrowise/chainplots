@@ -1,0 +1,5 @@
+blockchain_data.json
+log.txt
+db.sqlite3
+error.log
+*.pyc

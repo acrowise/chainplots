@@ -1,0 +1,6 @@
+{% extends 'page_tipo.html' %} {% load static %}
+{% block header %}Number of TX per block{% endblock %}
+{% block text %}Total number of transactions in each block.{% endblock %}
+
+{% block pixel_info %}Full dark pixel means there is no transaction in the block a and full colored pixel means that there are more than {{ range_max }} transactions in the block.{% endblock %}
+{% block line_info %}Number of transactions included in each block. Each point value is a 1000 blocks average.{% endblock %}

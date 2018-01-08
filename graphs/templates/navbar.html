@@ -1,0 +1,42 @@
+<!-- Navbar  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">Chainplots</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item {% if plot == 'plot1' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot1' %}">1 coinb</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot2' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot2' %}">2 tts coinb</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot3' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot3' %}">3 output addr</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot4' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot4' %}">4 tx/sec</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot5' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot5' %}">5 tx/block</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot6' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot6' %}">6 timelock</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot7' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot7' %}">7 multisig</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot8' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot8' %}">8 P2SH</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot9' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot9' %}">9 OP_RETURN</a>
+            </li>
+            <li class="nav-item {% if plot == 'plot10' %}active{% endif %}">
+                <a class="nav-link" href="{% url 'plot10' %}">10 Apps</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- End Navbar -->
