@@ -203,7 +203,7 @@ if __name__ == '__main__':
         if args.conffile:
             BTC_CONF_FILE = args.conffile
         else:
-            BTC_CONF_FILE = "/home/ubuntu/bitcoin-data/"
+            BTC_CONF_FILE = "/home/ubuntu/bitcoin/"
 
         # Running the main script
         in_memory_data = {}
